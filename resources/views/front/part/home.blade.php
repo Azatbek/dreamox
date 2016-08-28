@@ -1,11 +1,12 @@
+@foreach($products as $items)
 <div class="col-sm-4 col-lg-4 col-md-4">
     <div class="thumbnail">
-        <img src="http://placehold.it/320x150" alt="">
+        <a href="products/{{$items->id}}"><img src="images/{{$items->img}}" alt=""></a>
         <div class="caption">
-            <h4 class="pull-right">$24.99</h4>
-            <h4><a href="#">Здесь будет название</a>
+            <h4 class="pull-right">{{$items->price}}</h4>
+            <h4><a href="products/{{$items->id}}">{{$items->title}}</a>
             </h4>
-            <p>Здесь будет описание.</p>
+            <p>{!!$items->anons!!}</p>
         </div>
         <div class="ratings">
             <p class="pull-right">15 отзывов</p>
@@ -19,112 +20,5 @@
         </div>
     </div>
 </div>
+@endforeach
 
-<div class="col-sm-4 col-lg-4 col-md-4">
-    <div class="thumbnail">
-        <img src="http://placehold.it/320x150" alt="">
-        <div class="caption">
-            <h4 class="pull-right">$64.99</h4>
-            <h4><a href="#">Second Product</a>
-            </h4>
-            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="ratings">
-            <p class="pull-right">12 отзывов</p>
-            <p>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-            </p>
-        </div>
-    </div>
-</div>
-
-<div class="col-sm-4 col-lg-4 col-md-4">
-    <div class="thumbnail">
-        <img src="http://placehold.it/320x150" alt="">
-        <div class="caption">
-            <h4 class="pull-right">$74.99</h4>
-            <h4><a href="#">Third Product</a>
-            </h4>
-            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="ratings">
-            <p class="pull-right">31 отзывов</p>
-            <p>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-            </p>
-        </div>
-    </div>
-</div>
-
-<div class="col-sm-4 col-lg-4 col-md-4">
-    <div class="thumbnail">
-        <img src="http://placehold.it/320x150" alt="">
-        <div class="caption">
-            <h4 class="pull-right">$84.99</h4>
-            <h4><a href="#">Fourth Product</a>
-            </h4>
-            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="ratings">
-            <p class="pull-right">6 отзывов</p>
-            <p>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-            </p>
-        </div>
-    </div>
-</div>
-
-<div class="col-sm-4 col-lg-4 col-md-4">
-    <div class="thumbnail">
-        <img src="http://placehold.it/320x150" alt="">
-        <div class="caption">
-            <h4 class="pull-right">$94.99</h4>
-            <h4><a href="#">Fifth Product</a>
-            </h4>
-            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="ratings">
-            <p class="pull-right">18 отзывов</p>
-            <p>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-            </p>
-        </div>
-    </div>
-</div>
-<div class="col-sm-4 col-lg-4 col-md-4">
-    <div class="thumbnail">
-        <img src="http://placehold.it/320x150" alt="">
-        <div class="caption">
-            <h4 class="pull-right">$94.99</h4>
-            <h4><a href="#">шестой Product</a>
-            </h4>
-            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="ratings">
-            <p class="pull-right">18 отзывов</p>
-            <p>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-            </p>
-        </div>
-    </div>
-</div>

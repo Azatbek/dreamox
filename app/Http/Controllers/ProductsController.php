@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\Products;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
@@ -14,7 +15,7 @@ class ProductsController extends Controller {
 	 */
 	public function index()
 	{
-		//
+		
 	}
 
 	/**
@@ -45,7 +46,9 @@ class ProductsController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		$product = Products::where('id','=',$id)->first();
+
+		return view('front.product',array('product'=>$product));
 	}
 
 	/**

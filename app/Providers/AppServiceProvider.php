@@ -1,6 +1,7 @@
 <?php namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\View\Factory;
 
 class AppServiceProvider extends ServiceProvider {
 
@@ -9,9 +10,12 @@ class AppServiceProvider extends ServiceProvider {
 	 *
 	 * @return void
 	 */
-	public function boot()
+	public function boot(Factory $view)
 	{
-		//
+		$view->composer('front.part.home', function ($view) {
+            $products = \App\Products::where('published','=',1)->paginate(6);
+            $view->with(compact('products'));
+        });
 	}
 
 	/**
