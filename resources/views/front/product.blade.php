@@ -30,7 +30,9 @@
                 <input name="WMI_DESCRIPTION"    value="Оплата за {{$product->title}}" type="hidden"/>
                 <input name="WMI_SUCCESS_URL"    value="http://localhost/dreambox/public?success" type="hidden"/>
                 <input name="WMI_FAIL_URL"       value="http://localhost/dreambox/public?fail" type="hidden"/>
-                <button class="btn btn-success" type="submit">
+                <input name="_token"       value="{{csrf_token()}}" type="hidden"/>
+                <input name="pr_id"       value="{{$product->id}}" type="hidden"/>
+                <button class="btn btn-success" id ="sendPost" type="button">
                   Купить
                 </button>
               </form>

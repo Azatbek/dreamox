@@ -15,6 +15,8 @@ Route::get('/', 'HomeController@index');
 
 Route::get('products/{article_id}', 'ProductsController@show');
 
+Route::post('payment', 'ProductsController@payment');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

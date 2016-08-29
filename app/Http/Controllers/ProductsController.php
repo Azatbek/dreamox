@@ -61,6 +61,10 @@ class ProductsController extends Controller {
 	{
 		//
 	}
+	public function payment()
+	{
+		dd('here');
+	}
 
 	/**
 	 * Update the specified resource in storage.
