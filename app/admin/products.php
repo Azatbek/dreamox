@@ -4,16 +4,14 @@ Admin::model(App\products::class)->title('Добавление нового пр
 
 })->columns(function ()
 {
-	Column::string('title')->sortableDefault();
-	Column::string('price')->sortableDefault();
-	Column::image('img')->sortableDefault();
-
+	Column::string('title', 'Заголовок')->sortableDefault();
+	Column::string('price', 'Стоимость товара')->sortableDefault();
 })->form(function ()
 {
-	FormItem::text('title', 'Title');
-	FormItem::text('price', 'Price');
-	FormItem::image('img', 'Img');
-	FormItem::checkbox('published', 'Published');
-	FormItem::ckeditor('anons', 'Anons');
-	FormItem::ckeditor('description', 'Description');
+	FormItem::text('title', 'Название товара');
+	FormItem::text('price', 'Стоимость');
+	FormItem::image('img', 'Изображение');
+	FormItem::checkbox('published', 'Опубликовать');
+	FormItem::ckeditor('anons', 'Короткое описание');
+	FormItem::ckeditor('description', 'Описание');
 });
