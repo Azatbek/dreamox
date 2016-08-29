@@ -145,7 +145,7 @@ return [
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
-
+		'Kozz\Laravel\Providers\Guzzle',
 	],
 
 	/*
@@ -204,7 +204,8 @@ return [
 		'Form'      => 'Illuminate\Html\FormFacade',
 		'Html'      => 'Illuminate\Html\HtmlFacade',
 		'Form' => 'Collective\Html\FormFacade',
-  	'Html' => 'Collective\Html\HtmlFacade'
+  	'Html' => 'Collective\Html\HtmlFacade',
+		'Guzzle' => 'Kozz\Laravel\Facades\Guzzle'
 	],
 
 ];

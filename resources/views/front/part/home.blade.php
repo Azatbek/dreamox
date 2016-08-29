@@ -3,7 +3,7 @@
     <div class="thumbnail">
         <a href="products/{{$items->id}}"><img src="images/{{$items->img}}" alt=""></a>
         <div class="caption">
-            <h4 class="pull-right">{{$items->price}}</h4>
+            <h4 class="pull-right">{{$items->price}} KZT</h4>
             <h4><a href="products/{{$items->id}}">{{$items->title}}</a>
             </h4>
             <p>{!!$items->anons!!}</p>
@@ -21,4 +21,3 @@
     </div>
 </div>
 @endforeach
-

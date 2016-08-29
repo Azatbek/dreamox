@@ -5,24 +5,24 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{!! asset('images') !!}/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="{!! asset('images') !!}/favicon.ico" type="image/x-icon">
 @if(isset($product))
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{{$product->title}}" />
     <meta property="og:url" content="{{URL::current()}}" />
     <meta property="og:description" content="{!!$product->anons!!}" />
     <meta property="og:locale" content="ru_RU">
-    <meta property="og:image" content="images/{{$product->img}}" />
+    <meta property="og:image" content="{!! asset('images') !!}/{{$product->img}}" />
 @else
 	<meta property="og:type" content="article" />
     <meta property="og:title" content="Dream Brox" />
     <meta property="og:url" content="{{URL::current()}}" />
     <meta property="og:description" content="Your dream box" />
     <meta property="og:locale" content="ru_RU">
-    <meta property="og:image" content="images/logo.jpg" />
+    <meta property="og:image" content="{!! asset('images/logo.jpg') !!}" />
 @endif
-    
+
 
     <title>Your Dream Box</title>
     <!-- Bootstrap Core CSS -->

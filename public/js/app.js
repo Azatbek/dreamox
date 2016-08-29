@@ -8,16 +8,17 @@ $(document).ready(function(){
 function sendPayment(){
 
         var dataMap = {};
-        email=$('input[name=pr_id]').val();
+        id=$('input[name=pr_id]').val();
         email=$('input[name=email]').val();
         token=$('input[name=_token]').val();
-        dataMap['id'] = email;
+        dataMap['id'] = id;
+				dataMap['email'] = email;
         dataMap['_token'] = token;
         $.ajax({
 		   type: "POST",
 		   data: dataMap,
 		   url: 'http://localhost/dreambox/public/payment',
-		  
+
 		   success: function(response){
 		   }
 

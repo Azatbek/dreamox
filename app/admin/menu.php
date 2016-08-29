@@ -18,3 +18,4 @@
 Admin::menu()->url('/')->label('Start page')->icon('fa-dashboard')->uses('\SleepingOwl\Admin\Controllers\DummyController@getIndex');
 Admin::menu(\App\products::class)->label('Продукты')->icon('fa-bank');
 Admin::menu(\App\user::class)->label('Пользователи')->icon('fa-user');
+Admin::menu(\App\Payments::class)->label('Транзакции')->icon('fa-money');
