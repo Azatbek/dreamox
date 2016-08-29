@@ -1,5 +1,6 @@
 <?php
-Admin::model(App\products::class)->title('Добавление нового продукта в магазин')->with()->filters(function ()
+
+Admin::model(\App\products::class)->title('Добавление нового продукта в магазин')->with()->filters(function ()
 {
 
 })->columns(function ()
@@ -9,8 +10,9 @@ Admin::model(App\products::class)->title('Добавление нового пр
 })->form(function ()
 {
 	FormItem::text('title', 'Название товара');
-	FormItem::text('price', 'Стоимость');
+	FormItem::text('price', 'Цена');
 	FormItem::image('img', 'Изображение');
+	FormItem::checkbox('available', 'В наличии');
 	FormItem::checkbox('published', 'Опубликовать');
 	FormItem::ckeditor('anons', 'Короткое описание');
 	FormItem::ckeditor('description', 'Описание');

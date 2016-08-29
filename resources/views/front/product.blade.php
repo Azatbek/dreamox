@@ -15,7 +15,7 @@
   					<div class="product-rating"><i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </div>
   					<hr>
   					<div class="product-price">{{$product->price}} KZT</div>
-  					<div class="product-stock">В наличии</div>
+  					<div class="product-stock">@if($product->available==1)В наличии@else <span style="color:red">Нет в наличии</span>@endif</div>
   					<hr>
   					<div class="btn-group cart">
   						<button type="button" class="btn btn-success">
