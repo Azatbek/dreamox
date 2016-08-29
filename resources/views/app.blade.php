@@ -9,7 +9,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{{$product->title}}" />
     <meta property="og:url" content="{{URL::current()}}" />
-    <meta property="og:description" content="{{$product->anons}}" />
+    <meta property="og:description" content="{!!$product->anons!!}" />
     <meta property="og:locale" content="ru_RU">
     <meta property="og:image" content="images/{{$product->img}}" />
 @else
