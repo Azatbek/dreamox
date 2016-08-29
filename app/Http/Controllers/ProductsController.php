@@ -64,22 +64,8 @@ class ProductsController extends Controller {
 	public function payment()
 	{
 		$data = Input::all();
-		$id = Input::get('id');
+		$id = Input::get('pr_id');
 		$product = Products::where('id','=',$id)->first();
-
-		$response = Guzzle::post(
-    'https://wl.walletone.com/checkout/checkout/Index',
-    [
-        'form_params' => [
-            'WMI_MERCHANT_ID' => 197239847398,
-						'WMI_PAYMENT_AMOUNT' => $product->price,
-						'WMI_CURRENCY_ID' => 398,
-						'WMI_DESCRIPTION' => 'Оплата за'.$product->title,
-						'WMI_SUCCESS_URL' => 'http://google.com',
-						'WMI_FAIL_URL' => 'http://kaz-news.kz'
-        ]
-    ]
-);
 	}
 	/**
 	 * Update the specified resource in storage.

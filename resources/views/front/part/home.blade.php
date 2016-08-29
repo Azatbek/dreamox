@@ -9,7 +9,7 @@
             <p>{!!$items->anons!!}</p>
         </div>
         <div class="ratings">
-            <p class="pull-right">15 отзывов</p>
+            <p class="pull-right"><span class="disqus-comment-count" data-disqus-url="http://localhost/dreambox/public/products/{{$items->id}}"></span></p>
             <p>
                 <span class="glyphicon glyphicon-star"></span>
                 <span class="glyphicon glyphicon-star"></span>

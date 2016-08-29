@@ -22,7 +22,7 @@
               <form method="post" action="https://wl.walletone.com/checkout/checkout/Index">
                 <div class="form-group">
                   <label for="email">Введите свой e-mail адрес для получения уведомления</label>
-                  <input type="text" class="form-control" placeholder="email" name="email" />
+                  <input type="text" class="form-control" placeholder="email" name="WMI_CUSTOMER_EMAIL" />
                 </div>
                 <input name="WMI_MERCHANT_ID"    value="197239847398" type="hidden"/>
                 <input name="WMI_PAYMENT_AMOUNT" value="{{$product->price}}" type="hidden"/>
@@ -32,9 +32,7 @@
                 <input name="WMI_FAIL_URL"       value="http://localhost/dreambox/public?fail" type="hidden"/>
                 <input name="_token"       value="{{csrf_token()}}" type="hidden"/>
                 <input name="pr_id"       value="{{$product->id}}" type="hidden"/>
-                <button class="btn btn-success" id ="sendPost" type="button">
-                  Купить
-                </button>
+                <button class="btn btn-success" type="submit">Купить</button>
               </form>
   					</div>
   					</div>
@@ -45,8 +43,8 @@
 		<div class="container-fluid">
 			<div class="col-md-12 product-info">
 					<ul id="myTab" class="nav nav-tabs nav_tabs">
-
 						<li class="active"><a href="#service-one" data-toggle="tab">Описание</a></li>
+            <li><a href="#service-two" data-toggle="tab">Комментарии</a></li>
 					</ul>
 				<div id="myTabContent" class="tab-content">
 						<div class="tab-pane fade in active" id="service-one">
@@ -56,6 +54,21 @@
 							</section>
 
 						</div>
+            <div class="tab-pane" id="service-two">
+              <section class="container comments">
+                <div id="disqus_thread"></div>
+                <script>
+                (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = '//http-yourdreambox-kz.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+              </section>
+            </div>
 				</div>
 				<hr>
 			</div>
