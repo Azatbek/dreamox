@@ -19,9 +19,21 @@
   					<div class="product-stock">@if($product->available==1)В наличии@else <span style="color:red">Нет в наличии</span>@endif</div>
   					<hr>
   					<div class="btn-group cart">
-  						<button type="button" class="btn btn-success">
-  							Купить
-  						</button>
+              <form method="post" action="https://wl.walletone.com/checkout/checkout/Index">
+                <div class="form-group">
+                  <label for="email">Введите свой e-mail адрес для получения уведомления</label>
+                  <input type="text" class="form-control" placeholder="email" name="email" />
+                </div>
+                <input name="WMI_MERCHANT_ID"    value="197239847398" type="hidden"/>
+                <input name="WMI_PAYMENT_AMOUNT" value="{{$product->price}}" type="hidden"/>
+                <input name="WMI_CURRENCY_ID"    value="398" type="hidden"/>
+                <input name="WMI_DESCRIPTION"    value="Оплата за {{$product->title}}" type="hidden"/>
+                <input name="WMI_SUCCESS_URL"    value="http://localhost/dreambox/public?success" type="hidden"/>
+                <input name="WMI_FAIL_URL"       value="http://localhost/dreambox/public?fail" type="hidden"/>
+                <button class="btn btn-success" type="submit">
+                  Купить
+                </button>
+              </form>
   					</div>
   					</div>
   				</div>
