@@ -1,4 +1,5 @@
 @extends('app')
+@section('content')
 <div class="container-fluid">
     <div class="content-wrapper">
 		<div class="item-container">
@@ -47,3 +48,4 @@
 		</div>
 	</div>
 </div>
+@endsection
