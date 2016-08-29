@@ -9,13 +9,9 @@
     <meta name="author" content="">
 
     <title>Your Dream Box</title>
-
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/shop-homepage.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="{!! asset('css/bootstrap.min.css') !!}">
+    <link rel="stylesheet" href="{!! asset('css/shop-homepage.css') !!}">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

@@ -136,7 +136,7 @@ return [
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'SleepingOwl\Admin\AdminServiceProvider',
-		'Illuminate\Html\HtmlServiceProvider',
+		'Collective\Html\HtmlServiceProvider',
 		/*
 		 * Application Service Providers...
 		 */
@@ -203,7 +203,8 @@ return [
 
 		'Form'      => 'Illuminate\Html\FormFacade',
 		'Html'      => 'Illuminate\Html\HtmlFacade',
-
+		'Form' => 'Collective\Html\FormFacade',
+  	'Html' => 'Collective\Html\HtmlFacade'
 	],
 
 ];
