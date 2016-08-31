@@ -15,6 +15,6 @@
  * 		});
  */
 
-Admin::menu(\App\products::class)->label('Продукты')->icon('fa-bank');
+Admin::menu(\App\Products::class)->label('Продукты')->icon('fa-bank');
 Admin::menu(\App\user::class)->label('Пользователи')->icon('fa-user');
 Admin::menu(\App\Payments::class)->label('Транзакции')->icon('fa-money');

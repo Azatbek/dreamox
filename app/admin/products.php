@@ -1,6 +1,7 @@
 <?php
 
-Admin::model(\App\products::class)->title('Добавление нового продукта в магазин')->with()->filters(function ()
+
+Admin::model(\App\Products::class)->title('Добавление нового продукта в магазин')->with()->filters(function ()
 {
 
 })->columns(function ()
