@@ -197,7 +197,7 @@ footer {
 		}
 		@font-face {
 			font-family: "GothamBold";
-			src: url(fonts/gotham-bold.ttf) format("truetype");
+			src: url(../fonts/gotham-bold.ttf) format("truetype");
 		}
 	.intro{
 	background: url(../img/bg.jpg) no-repeat center center fixed;
@@ -253,3 +253,25 @@ footer {
 	.btn.sharp {
 	  border-radius:0;
 	}
+
+
+.product_prev ul {
+    list-style: none outside none;
+    padding-left: 0;
+    margin-bottom:0;
+}
+.product_prev li {
+    display: block;
+    float: left;
+    margin-right: 6px;
+    cursor:pointer;
+}
+.product_prev img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+.pink{
+  font-size:1.575rem;
+  color:#e72d9e !important;
+}
