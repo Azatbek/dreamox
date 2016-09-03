@@ -14,7 +14,7 @@ class AppServiceProvider extends ServiceProvider {
 	{
 		$view->composer('front.part.home', function ($view) {
             $product = \App\Products::where('published','=',1)->where('on_home','=',1)->first();
-						$thumbnails = \App\Thumbnails::where('product_id','=',$product->id)->get();
+			$thumbnails = \App\Thumbnails::where('product_id','=',$product->id)->get();
             $view->with(compact('product'))->with(compact('thumbnails'));
         });
 	}
