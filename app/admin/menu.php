@@ -17,3 +17,4 @@
 
 Admin::menu(\App\Products::class)->label('Продукты')->icon('fa-upload');
 Admin::menu(\App\User::class)->label('Пользователи')->icon('fa-user');
+Admin::menu(\App\Thumbnails::class)->label('Изображения')->icon('fa-image');
