@@ -27,6 +27,7 @@
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="{!! asset('css/bootstrap.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('css/shop-homepage.css') !!}">
+    <link rel="stylesheet" href="{!! asset('css/lightslider.min.css') !!}">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -82,7 +83,7 @@
 	</div>
 	<!-- /.container -->
 	<!-- Scripts -->
-
+  <script src="{!! asset('js/lightslider.min.css') !!}"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
   <script id="dsq-count-scr" src="//http-yourdreambox-kz.disqus.com/count.js" async></script>
