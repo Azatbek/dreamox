@@ -1,4 +1,3 @@
-@foreach($products as $product)
 <div class="container-fluid">
     <div class="content-wrapper">
 		<div class="item-container">
@@ -10,6 +9,11 @@
                 <li data-thumb="images/{{$product->img}}">
                   <img src="images/{{$product->img}}" />
                 </li>
+                @foreach($thumbnails as $thumb)
+                <li data-thumb="images/{{$thumb->img}}">
+                  <img src="images/{{$thumb->img}}" />
+                </li>
+                @endforeach
               </ul>
             </div>
 					</div>
@@ -78,5 +82,3 @@
 		</div>
 	</div>
 </div>
-
-@endforeach
