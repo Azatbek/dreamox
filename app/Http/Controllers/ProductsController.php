@@ -15,7 +15,9 @@ class ProductsController extends Controller {
 	 */
 	public function index()
 	{
+		$product = Products::where('publid','=',1)->get();
 
+		return view('front.product',array('product'=>$product));
 	}
 
 	/**
