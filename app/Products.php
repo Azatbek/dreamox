@@ -13,7 +13,7 @@
 	*
 	* @var array
 	*/
-	protected $fillable = ['title','anons','description','img','price','published','available'];
+	protected $fillable = ['title','anons','description','img','price','published','available','on_home'];
 
 	public function getImageFields()
 	{

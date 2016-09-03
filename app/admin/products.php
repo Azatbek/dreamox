@@ -14,6 +14,7 @@ Admin::model(\App\Products::class)->title('Добавление нового п�
 	FormItem::text('price', 'Цена');
 	FormItem::image('img', 'Изображение');
 	FormItem::checkbox('available', 'В наличии');
+	FormItem::checkbox('on_home', 'Опубликовать на главной странице');
 	FormItem::checkbox('published', 'Опубликовать');
 	FormItem::ckeditor('anons', 'Короткое описание');
 	FormItem::ckeditor('description', 'Описание');
